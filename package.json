@@ -1,0 +1,15 @@
+{
+  "name": "kebron",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "KranzAklilu <kranua.cr7@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "normalize-scss": "^7.0.1",
+    "normalize.scss": "^0.1.0",
+    "parcel-bundler": "^1.12.4"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}

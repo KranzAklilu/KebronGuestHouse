@@ -6,7 +6,6 @@
   "license": "ISC",
   "dependencies": {
     "normalize-scss": "^7.0.1",
-    "normalize.scss": "^0.1.0",
     "parcel-bundler": "^1.12.4"
   },
   "devDependencies": {

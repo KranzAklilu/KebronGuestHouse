@@ -1,6 +1,9 @@
+@import "./normalize";
+@import "../0-utilities/variable";
+@import "../0-utilities/mixin";
+@import "../0-utilities/mixin";
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+
 body {
-  background: black;
-}
-h1 {
-  color: white;
+  font-family: "Raleway", sans-serif;
 }

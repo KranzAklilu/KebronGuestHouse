@@ -5,10 +5,14 @@
   "author": "KranzAklilu <kranua.cr7@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "normalize-scss": "^7.0.1",
-    "parcel-bundler": "^1.12.4"
+    "normalize-scss": "^7.0.1"
   },
   "devDependencies": {
+    "parcel-bundler": "^1.12.4",
     "sass": "^1.26.10"
+  },
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
   }
 }

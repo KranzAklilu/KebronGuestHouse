@@ -7,6 +7,7 @@
  *    IE on Windows Phone and in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 html {
   line-height: 1.15;
   /* 1 */
@@ -474,6 +475,8 @@ a {
 }
 
 #header {
+  position: fixed;
+  z-index: 10;
   width: 100%;
   height: 95px;
   background: #3ab195;
@@ -485,6 +488,8 @@ a {
 }
 
 #landing-page {
+  position: relative;
+  top: 95px;
   max-width: 100%;
   height: 225px;
   background: url(/keb_building.056baa25.jpg) no-repeat center;
@@ -506,14 +511,12 @@ a {
   background-color: #e34b3b;
 }
 
-.arrow {
-  width: 9px;
-}
-
 #booking {
+  position: relative;
+  top: 95px;
   max-width: 100%;
-  margin: 50px 0;
-  padding: 0 50px;
+  margin: 50px 0 80px;
+  padding: 0 35px;
   text-align: center;
 }
 
@@ -535,6 +538,14 @@ a {
   text-align: center;
 }
 
+#footer {
+  width: 100%;
+  background-color: #3a3c50;
+  color: #fff;
+  padding: 40px 50px;
+  text-align: center;
+}
+
 .header .logo {
   height: 30px;
   width: 350px;
@@ -545,38 +556,37 @@ a {
   font-weight: 400;
 }
 .header .hamburger {
-  position: relative;
-  top: 5px;
   height: 10px;
 }
-.header .hamburger--line {
+.header .hamburger__line {
   background-color: #fff;
   width: 22px;
   height: 1px;
   margin-bottom: 6px;
 }
 
-.landing-page .arrow-container {
+.landing-page .icon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 0 75px;
+  padding: 0 40px;
   position: relative;
   top: 45%;
-}
-.landing-page .arrow-container .arrow {
-  width: 9px;
+  color: #e34b3b;
 }
 .landing-page .caerousel-container {
-  width: 7px;
-  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: relative;
-  top: 85%;
+  top: 80%;
+  color: white;
+  font-size: 10px;
 }
-.landing-page .caerousel-container .caerousel {
-  margin: 0 20px;
-  height: 22px;
+.landing-page .caerousel-container .far {
+  margin: 0 5px;
 }
 
 .booking__header {
@@ -603,8 +613,10 @@ a {
   text-transform: uppercase;
   font-size: 18px;
   font-weight: 600;
+  text-align: left;
 }
 .booking__input {
+  min-width: 140px;
   border: none;
   border-bottom: 1px solid #a3a3a3;
 }
@@ -615,7 +627,7 @@ a {
 
 .gallery__header {
   text-align: left;
-  margin: 30px 20px;
+  margin: 15px 20px;
   text-transform: uppercase;
   font-size: 22px;
 }
@@ -629,6 +641,10 @@ a {
   margin: 15px 20px;
   text-align: left;
   color: white;
+  font-size: 20px;
+}
+.gallery__slider .fas {
+  margin: 0 5px;
 }
 .gallery__img {
   display: flex;
@@ -641,6 +657,9 @@ a {
 .gallery__img * {
   height: 100%;
   width: 50%;
+}
+.gallery__link {
+  margin-bottom: 0;
 }
 
 .description__menu {
@@ -681,7 +700,7 @@ a {
   text-transform: capitalize;
 }
 .description__btn {
-  margin: 15px auto;
+  margin: 0 auto 30px;
 }
 .description__img {
   width: 100%;
@@ -694,9 +713,37 @@ a {
   margin-bottom: 50px;
 }
 .testimonial__card {
-  width: 60%;
+  padding: 20px 25px;
+  width: 65%;
   margin: 30px auto;
-  border: 1px solid black;
+  box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+}
+.testimonial__parg {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 12px;
+}
+.testimonial__speaker {
+  color: #3ab195;
+  font-size: 18px;
+  font-family: 700;
+  text-align: left;
+  text-transform: uppercase;
+}
+.testimonial__quote {
+  color: #3ab195;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.footer__link {
+  display: inline-block;
+  color: #fff;
+  margin: 15px 0;
+  font-size: 25px;
+}
+.footer__copyright {
+  margin: 20px 0;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

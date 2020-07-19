@@ -1,0 +1,194 @@
+.header {
+  .logo {
+    height: 30px;
+    width: 350px;
+  }
+  .nav {
+    &__header {
+      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .hamburger {
+    height: 10px;
+    &__line {
+      background-color: #fff;
+      width: 22px;
+      height: 1px;
+      margin-bottom: 6px;
+    }
+  }
+}
+.landing-page {
+  .icon {
+    @include flex(row, space-between, center);
+    padding: 0 40px;
+    position: relative;
+    top: 45%;
+    color: $secondary;
+  }
+  .caerousel-container {
+    @include flex(row, center, center);
+    position: relative;
+    top: 80%;
+    color: white;
+
+    font-size: 10px;
+    .far {
+      margin: 0 5px;
+    }
+  }
+}
+.booking {
+  &__header {
+    color: $primary;
+    font-size: 24px;
+    text-transform: capitalize;
+    font-weight: 400;
+    margin-bottom: 40px;
+  }
+  &__check {
+    @include flex(row, space-between, center);
+    margin: 20px 0;
+  }
+  &__select {
+    @include flex(row, flex-start, center);
+  }
+
+  &__parg {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: left;
+  }
+  &__input {
+    min-width: 140px;
+    border: none;
+    border-bottom: 1px solid rgb(163, 163, 163);
+  }
+  .select {
+    border: none;
+    margin-left: 20px;
+  }
+}
+.gallery {
+  &__header {
+    text-align: left;
+    margin: 15px 20px;
+    text-transform: uppercase;
+    font-size: 22px;
+  }
+  &__parg {
+    margin: 50px 20px 10px 20px;
+    text-align: left;
+    text-transform: capitalize;
+    font-size: 14px;
+  }
+  &__slider {
+    margin: 15px 20px;
+    text-align: left;
+    color: white;
+    font-size: 20px;
+    .fas {
+      margin: 0 5px;
+    }
+  }
+  &__img {
+    @include flex(row, center, center);
+    width: 100%;
+    height: 100px;
+    * {
+      height: 100%;
+      width: 50%;
+    }
+  }
+  &__link {
+    margin-bottom: 0;
+  }
+}
+.description {
+  &__menu {
+    width: 100%;
+    height: 55px;
+    background-color: $primary;
+  }
+  &__list {
+    @include flex(row, space-evenly, center);
+    height: 100%;
+    padding: 0;
+  }
+  &__link {
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    text-transform: capitalize;
+  }
+  &__header {
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    margin: 40px 40px 25px 40px;
+  }
+  &__card {
+    text-align: center;
+    margin: 0 30px;
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &__parg {
+    margin: 30px 35px;
+    line-height: 1.6;
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+  &__btn {
+    margin: 0 auto 30px;
+  }
+  &__img {
+    width: 100%;
+  }
+}
+.testimonial {
+  &__header {
+    font-size: 28px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 50px;
+  }
+  &__card {
+    padding: 20px 25px;
+    width: 65%;
+    margin: 30px auto;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.25);
+  }
+  &__parg {
+    margin-bottom: 20px;
+    text-align: left;
+    font-size: 12px;
+  }
+  &__speaker {
+    color: $primary;
+    font-size: 18px;
+    font-family: 700;
+    text-align: left;
+    text-transform: uppercase;
+  }
+  &__quote {
+    color: $primary;
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+.footer {
+  &__link {
+    display: inline-block;
+    color: #fff;
+    margin: 15px 0;
+    font-size: 25px;
+  }
+  &__copyright {
+    margin: 20px 0;
+  }
+}

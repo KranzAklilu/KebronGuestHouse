@@ -1,8 +1,8 @@
 Arguments: 
-  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==
+  C:\Program Files\nodejs\node.exe C:\Program Files\Yarn\bin\yarn.js add netlify-clie
 
 PATH: 
-  C:\Users\Vanua\AppData\Local\Temp\yarn--1595187334553-0.3549304657265744;C:\Kranua\Project\Kebron\node_modules\.bin;C:\Users\Vanua\AppData\Local\Yarn\Data\link\node_modules\.bin;C:\Program Files\libexec\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\lib\node_modules\npm\bin\node-gyp-bin;C:\Program Files\nodejs\node_modules\npm\bin\node-gyp-bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Yarn\bin\;C:\Program Files\nodejs\;;C:\Users\Vanua\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Vanua\AppData\Local\Yarn\bin;C:\Users\Vanua\AppData\Roaming\npm
+  C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\Git\mingw32\bin;C:\Program Files\Git\usr\bin;C:\Program Files\Yarn\bin\;C:\Program Files\nodejs\;;C:\Users\Vanua\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\Vanua\AppData\Local\Yarn\bin;C:\Users\Vanua\AppData\Roaming\npm
 
 Yarn version: 
   1.22.4
@@ -14,7 +14,7 @@ Platform:
   win32 ia32
 
 Trace: 
-  Error: https://registry.yarnpkg.com/sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==: Not found
+  Error: https://registry.yarnpkg.com/netlify-clie: Not found
       at Request.params.callback [as _callback] (C:\Program Files\Yarn\lib\cli.js:66096:18)
       at Request.self.callback (C:\Program Files\Yarn\lib\cli.js:140748:22)
       at Request.emit (events.js:315:20)

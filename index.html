@@ -12,6 +12,13 @@
         <img class="logo" src="./assets/logo.png" alt="" />
         <nav class="nav">
           <h1 class="nav__header">Menu</h1>
+          <ul class="nav__list">
+            <li><a href="" class="nav__link">accomodations</a></li>
+            <li><a href="" class="nav__link">gallery</a></li>
+            <li><a href="" class="nav__link">home</a></li>
+            <li><a href="" class="nav__link">amenities</a></li>
+            <li><a href="" class="nav__link">contact</a></li>
+          </ul>
         </nav>
         <div class="hamburger">
           <div class="hamburger__line"></div>
@@ -33,49 +40,55 @@
         </section>
         <section id="booking" class="booking">
           <h1 class="booking__header">book online now</h1>
-          <div class="booking__check">
-            <h2 class="booking__parg">check-in date:</h2>
-            <input
-              type="date"
-              class="booking__input"
-              placeholder="22/11/2020"
-            />
+          <div class="booking__input-container">
+            <div class="booking__check">
+              <h2 class="booking__parg">check-in date:</h2>
+              <input
+                type="date"
+                class="booking__input"
+                placeholder="22/11/2020"
+              />
+            </div>
+            <div class="booking__check">
+              <h2 class="booking__parg">check-out date:</h2>
+              <input
+                type="date"
+                class="booking__input"
+                placeholder="22/11/2020"
+              />
+            </div>
+            <div class="booking__select">
+              <h2 class="booking__parg">adults per room:</h2>
+              <select class="select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+            </div>
+            <a href="#" class="primary-btn booking__link">Search</a>
           </div>
-          <div class="booking__check">
-            <h2 class="booking__parg">check-out date:</h2>
-            <input
-              type="date"
-              class="booking__input"
-              placeholder="22/11/2020"
-            />
-          </div>
-          <div class="booking__select">
-            <h2 class="booking__parg">adults per room:</h2>
-            <select class="select">
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-            </select>
-          </div>
-          <a href="#" class="primary-btn booking__link">Search</a>
         </section>
         <section id="gallery" class="gallery">
-          <h1 class="gallery__header">a glance from the rich gallery</h1>
-          <p class="gallery__parg">
-            browse our photo gallery to experience the elegance and greatness of
-            out guest house
-          </p>
-          <div class="gallery__slider">
-            <i class="fas fa-caret-left"></i>
-            <i class="fas fa-caret-right"></i>
+          <div class="gallery__section1">
+            <h1 class="gallery__header">a glance from the rich gallery</h1>
+            <p class="gallery__parg">
+              browse our photo gallery to experience the elegance and greatness
+              of out guest house
+            </p>
+            <div class="gallery__slider">
+              <i class="fas fa-caret-left"></i>
+              <i class="fas fa-caret-right"></i>
+            </div>
+            <a href="#" class="primary-btn gallery__link">Explore</a>
           </div>
-          <div class="gallery__img">
-            <img src="./assets/kghroomview.jpg" alt="Room View" />
-            <img src="./assets/kghcommonarea2.jpg" alt="Common Area" />
+          <div class="gallery__section2">
+            <div class="gallery__img">
+              <img src="./assets/kebron-guest-house.jpg" alt="Room View" />
+              <img src="./assets/kghcommonarea.jpg" alt="Common Area" />
+            </div>
           </div>
-          <a href="#" class="primary-btn gallery__link">Explore</a>
         </section>
         <section id="description" class="description">
           <div class="description__menu">
@@ -101,49 +114,53 @@
               src="./assets/kghroomview.jpg"
               alt=""
             />
-            <p class="description__parg">
-              Decorated with stunning furniture, Kebron Guest House, offers
-              visitors a warm and cozy environment. Its modern style is inviting
-              and comfortable. Each room has its own unique quality and is
-              matched with vibrant colors.
-            </p>
-            <a href="" class="primary-btn description__btn">Explore</a>
+            <div class="description__text-container">
+              <p class="description__parg">
+                Decorated with stunning furniture, Kebron Guest House, offers
+                visitors a warm and cozy environment. Its modern style is
+                inviting and comfortable. Each room has its own unique quality
+                and is matched with vibrant colors.
+              </p>
+              <a href="" class="primary-btn description__btn">Explore</a>
+            </div>
           </div>
         </section>
         <section id="testimonial" class="testimonial">
           <h1 class="testimonial__header">satisfied customers</h1>
-          <div class="testimonial__card">
-            <p class="testimonial__parg">
-              <span class="testimonial__quote">"</span> I have stayed for 6 days
-              in that hotel. The stay is beyond my expectations.
-              <span class="testimonial__quote">“</span>
-            </p>
-            <p class="testimonial__speaker">-sridhab bangalore</p>
-          </div>
-          <div class="testimonial__card">
-            <p class="testimonial__parg">
-              <span class="testimonial__quote">“</span> This is the third time
-              that I've stayed at the Kebron Guest house -- and I know I'll be
-              back again! <span class="testimonial__quote">“</span>
-            </p>
-            <p class="testimonial__speaker">-crcooper M, vermon</p>
-          </div>
-          <div class="testimonial__card">
-            <p class="testimonial__parg">
-              <span class="testimonial__quote">“</span> The staff at the guess
-              house made you feel welcome and were very helpful in every way
-              they could. <span class="testimonial__quote">“</span>
-            </p>
-            <p class="testimonial__speaker">-Sao D Kuwait</p>
-          </div>
-          <div class="testimonial__card">
-            <p class="testimonial__parg">
-              <span class="testimonial__quote">“</span> Kebron is a fantastic
-              guesthouse. The rooms are clean and comfortable, the staff is
-              delightful, kind, and helpful, and the food is great.
-              <span class="testimonial__quote">“</span>
-            </p>
-            <p class="testimonial__speaker">-Toledo, Ohio</p>
+          <div class="card-container">
+            <div class="testimonial__card">
+              <p class="testimonial__parg">
+                <span class="testimonial__quote">"</span> I have stayed for 6
+                days in that hotel. The stay is beyond my expectations.
+                <span class="testimonial__quote">“</span>
+              </p>
+              <p class="testimonial__speaker">-sridhab bangalore</p>
+            </div>
+            <div class="testimonial__card">
+              <p class="testimonial__parg">
+                <span class="testimonial__quote">“</span> This is the third time
+                that I've stayed at the Kebron Guest house -- and I know I'll be
+                back again! <span class="testimonial__quote">“</span>
+              </p>
+              <p class="testimonial__speaker">-crcooper M, vermon</p>
+            </div>
+            <div class="testimonial__card">
+              <p class="testimonial__parg">
+                <span class="testimonial__quote">“</span> The staff at the guess
+                house made you feel welcome and were very helpful in every way
+                they could. <span class="testimonial__quote">“</span>
+              </p>
+              <p class="testimonial__speaker">-Sao D Kuwait</p>
+            </div>
+            <div class="testimonial__card">
+              <p class="testimonial__parg">
+                <span class="testimonial__quote">“</span> Kebron is a fantastic
+                guesthouse. The rooms are clean and comfortable, the staff is
+                delightful, kind, and helpful, and the food is great.
+                <span class="testimonial__quote">“</span>
+              </p>
+              <p class="testimonial__speaker">-Toledo, Ohio</p>
+            </div>
           </div>
         </section>
       </main>

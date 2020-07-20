@@ -1,23 +1,6 @@
 #App {
   width: 100%;
 }
-#header {
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 95px;
-  background: $primary;
-  color: white;
-  @include flex(column, center, center);
-}
-#landing-page {
-  position: relative;
-  top: 95px;
-  max-width: 100%;
-  height: 225px;
-  background: url(../assets/keb_building.jpg) no-repeat center;
-  background-size: cover;
-}
 .primary-btn {
   display: inline-block;
   margin: 50px auto;
@@ -32,24 +15,77 @@
   border-radius: 10px;
   background-color: $secondary;
 }
-#booking {
-  position: relative;
-  top: 95px;
+@media (min-width: 750px) {
+  .primary-btn {
+    display: unset;
+    height: 50px;
+    min-width: unset;
+    width: 150px;
+    padding: 17px 20px;
+  }
+}
+#header {
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  height: 95px;
+  background: $primary;
+  color: white;
+  @include flex(column, center, center);
+}
+#landing-page {
+  margin: 0 0 125px;
+  margin-top: 95px;
   max-width: 100%;
-  margin: 50px 0 80px;
+  height: 225px;
+  background: url(../assets/keb_building.jpg) no-repeat center;
+  background-size: cover;
+}
+@media (min-width: 750px) {
+  #landing-page {
+    height: 70vh;
+    margin-bottom: 0;
+  }
+}
+#booking {
+  background-color: #fff;
+  max-width: 100%;
+  margin-bottom: 20px;
   padding: 0 35px;
   text-align: center;
 }
+@media (min-width: 750px) {
+  #booking {
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    margin: 0 50px;
+    padding: 15px 0;
+  }
+}
 #gallery {
+  height: 400px;
   max-width: 100%;
   background-color: $primary;
   color: white;
   padding: 50px 10px;
   text-align: center;
 }
+@media (min-width: 750px) {
+  #gallery {
+    height: 300px;
+    position: relative;
+    top: -80px;
+    margin: 0 50px;
+    padding: 0;
+    text-align: right;
+  }
+}
 #description {
   max-width: 100%;
 }
+
 #testimonial {
   width: 100%;
   margin: 60px 0;

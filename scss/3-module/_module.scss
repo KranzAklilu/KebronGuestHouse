@@ -4,10 +4,15 @@
     width: 350px;
   }
   .nav {
+    width: 100%;
     &__header {
+      text-align: center;
       text-transform: uppercase;
       font-size: 14px;
       font-weight: 400;
+    }
+    &__list {
+      display: none;
     }
   }
   .hamburger {
@@ -17,6 +22,33 @@
       width: 22px;
       height: 1px;
       margin-bottom: 6px;
+    }
+  }
+}
+@media (min-width: 750px) {
+  .header {
+    .logo {
+      height: 45px;
+      width: auto;
+    }
+    .nav {
+      &__header {
+        display: none;
+      }
+      &__list {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+        @include flex(row, space-evenly, center);
+      }
+      &__link {
+        display: inline-block;
+        color: white;
+        text-transform: uppercase;
+      }
+    }
+    .hamburger {
+      display: none;
     }
   }
 }
@@ -40,6 +72,7 @@
     }
   }
 }
+
 .booking {
   &__header {
     color: $primary;
@@ -72,6 +105,32 @@
     margin-left: 20px;
   }
 }
+@media (min-width: 750px) {
+  .booking {
+    &__header {
+      font-size: 32px;
+    }
+    &__input-container {
+      @include flex(row, space-evenly, flex-start);
+    }
+    &__check,
+    &__select {
+      @include flex(column, center, center);
+      margin-top: 0;
+    }
+
+    &__input {
+    }
+    &__select {
+    }
+    &__parg {
+      width: 100%;
+    }
+    &__link {
+      margin: 0;
+    }
+  }
+}
 .gallery {
   &__header {
     text-align: left;
@@ -86,7 +145,7 @@
     font-size: 14px;
   }
   &__slider {
-    margin: 15px 20px;
+    margin: 15px 20px 0;
     text-align: left;
     color: white;
     font-size: 20px;
@@ -95,16 +154,48 @@
     }
   }
   &__img {
+    position: relative;
+    top: -130px;
     @include flex(row, center, center);
-    width: 100%;
+    max-width: 100%;
     height: 100px;
     * {
-      height: 100%;
       width: 50%;
+      height: 100%;
+      object-fit: cover;
     }
   }
   &__link {
-    margin-bottom: 0;
+    position: relative;
+    top: 80px;
+  }
+}
+@media (min-width: 750px) {
+  .gallery {
+    @include flex(row-reverse, center, center);
+
+    &__section1 {
+      min-width: 45%;
+      max-height: 100%;
+      padding: 20px;
+    }
+    &__section2 {
+      background-color: black;
+      min-height: 100%;
+    }
+    &__img {
+      position: unset;
+      object-fit: contain;
+      height: 300px;
+      :first-child {
+        width: 60%;
+      }
+    }
+    &__link {
+      position: relative;
+      padding: 10px 30px;
+      top: -15px;
+    }
   }
 }
 .description {
@@ -116,7 +207,6 @@
   &__list {
     @include flex(row, space-evenly, center);
     height: 100%;
-    padding: 0;
   }
   &__link {
     text-align: center;
@@ -150,6 +240,39 @@
     width: 100%;
   }
 }
+@media (min-width: 750px) {
+  .description {
+    &__menu {
+      background-color: #fff;
+    }
+    &__header {
+      text-align: right;
+      position: relative;
+      top: 80px;
+      right: 100px;
+      color: #fff;
+    }
+    &__link {
+      text-align: center;
+      font-size: 20px;
+      color: #000;
+      text-transform: capitalize;
+    }
+    &__card {
+      height: 300px;
+      max-width: 100%;
+      @include flex(row, flex-start, center);
+      text-align: left;
+    }
+    &__img {
+      height: 300px;
+      width: 50%;
+    }
+    &__btn {
+      margin: 0 35px;
+    }
+  }
+}
 .testimonial {
   &__header {
     font-size: 28px;
@@ -181,6 +304,20 @@
     font-weight: 700;
   }
 }
+@media (min-width: 750px) {
+  .testimonial {
+    .card-container {
+      margin: 0 60px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+      gap: 35px;
+    }
+    &__card {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}
 .footer {
   &__link {
     display: inline-block;
@@ -190,5 +327,16 @@
   }
   &__copyright {
     margin: 20px 0;
+  }
+}
+@media (min-width: 750px) {
+  .footer {
+    .social {
+      width: 50%;
+      margin: 20px auto 60px;
+    }
+    &__list {
+      @include flex(row, space-around, center);
+    }
   }
 }

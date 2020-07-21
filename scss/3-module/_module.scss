@@ -99,6 +99,7 @@
     display: none;
     width: 100%;
     object-fit: cover;
+    height: 225px;
     &--active {
       display: block;
     }
@@ -110,19 +111,6 @@
     position: relative;
     bottom: 150px;
     color: $secondary;
-  }
-  .caerousel-container {
-    z-index: 2;
-    cursor: pointer;
-    @include flex(row, center, center);
-    position: relative;
-    bottom: 50px;
-    color: #fff;
-
-    font-size: 10px;
-    .far {
-      margin: 0 5px;
-    }
   }
 }
 
@@ -263,20 +251,30 @@
     color: #fff;
     text-transform: capitalize;
   }
-  &__header {
-    font-size: 24px;
-    font-weight: 400;
-    text-align: left;
-    margin: 40px 40px 25px 40px;
-  }
+
   &__card {
+    display: none;
     text-align: center;
     margin: 0 30px;
     background-color: $primary;
     color: #fff;
+    &--active {
+      display: block;
+    }
   }
-
+  &__header {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 50px 0 0;
+    background-color: #fff;
+    color: #000000;
+    padding-bottom: 30px;
+  }
   &__parg {
+    text-align: left;
     margin: 30px 35px;
     line-height: 1.6;
     font-size: 12px;
@@ -294,12 +292,32 @@
     &__menu {
       background-color: #fff;
     }
+    &__card {
+      height: 300px;
+      max-width: 100%;
+      border: 1px solid b;
+      text-align: left;
+      display: none;
+      &--active {
+        max-width: 100%;
+        @include flex(column, flex-start, center);
+        flex-wrap: wrap;
+      }
+    }
+    &__text-container {
+      padding-top: 75px;
+      height: 100%;
+      width: 40%;
+    }
     &__header {
-      text-align: right;
       position: relative;
-      top: 80px;
-      right: 100px;
+      right: 36%;
+      bottom: 20px;
+      order: 2;
+      max-width: 275px;
+      text-align: left;
       color: #fff;
+      background-color: unset;
     }
     &__link {
       text-align: center;
@@ -307,15 +325,11 @@
       color: #000;
       text-transform: capitalize;
     }
-    &__card {
-      height: 300px;
-      max-width: 100%;
-      @include flex(row, flex-start, center);
-      text-align: left;
-    }
+
     &__img {
-      height: 300px;
-      width: 50%;
+      height: 100%;
+      width: 60%;
+      justify-self: flex-start;
     }
     &__btn {
       margin: 0 35px;

@@ -29,18 +29,16 @@
   top: 0;
   z-index: 10;
   width: 100%;
-  height: 95px;
+  max-height: 100px;
   background: $primary;
   color: white;
-  @include flex(column, center, center);
+  @include flex(column, flex-start, center);
 }
 #landing-page {
   margin: 0 0 125px;
   margin-top: 95px;
   max-width: 100%;
   height: 225px;
-  background: url(../assets/keb_building.jpg) no-repeat center;
-  background-size: cover;
 }
 @media (min-width: 750px) {
   #landing-page {
@@ -58,14 +56,14 @@
 @media (min-width: 750px) {
   #booking {
     position: relative;
-    top: -150px;
+    top: -180px;
     z-index: 1;
-    margin: 0 50px;
+    margin: 0 30px;
     padding: 15px 0;
   }
 }
 #gallery {
-  height: 400px;
+  height: 480px;
   max-width: 100%;
   background-color: $primary;
   color: white;

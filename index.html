@@ -10,8 +10,13 @@
     <div id="App">
       <header id="header" class="header">
         <img class="logo" src="./assets/logo.png" alt="" />
+        <h1 class="nav__header">Menu</h1>
+        <div class="hamburger">
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+          <div class="hamburger__line"></div>
+        </div>
         <nav class="nav">
-          <h1 class="nav__header">Menu</h1>
           <ul class="nav__list">
             <li><a href="" class="nav__link">accomodations</a></li>
             <li><a href="" class="nav__link">gallery</a></li>
@@ -20,17 +25,29 @@
             <li><a href="" class="nav__link">contact</a></li>
           </ul>
         </nav>
-        <div class="hamburger">
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-          <div class="hamburger__line"></div>
-        </div>
       </header>
       <main>
         <section id="landing-page" class="landing-page">
-          <div class="icon">
-            <i class="fas fa-chevron-left"></i>
-            <i class="fas fa-chevron-right"></i>
+          <div class="landing-page__img-container">
+            <img
+              class="landing-page__img landing-page__img--active"
+              src="./assets/keb_building.jpg"
+              alt=""
+            />
+            <img
+              class="landing-page__img"
+              src="./assets/keb_building.jpg"
+              alt=""
+            /><img
+              class="landing-page__img"
+              src="./assets/keb_building.jpg"
+              alt=""
+            />
+          </div>
+
+          <div class="landing-page__icon">
+            <i class="fas fa-chevron-left left"></i>
+            <i class="fas fa-chevron-right right"></i>
           </div>
           <div class="caerousel-container">
             <i class="far fa-circle"></i>
@@ -201,5 +218,6 @@
         <p class="footer__parg">Powered By endubis, Hosted By endubis HOST</p>
       </footer>
     </div>
+    <script src="./src/script.js"></script>
   </body>
 </html>

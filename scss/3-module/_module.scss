@@ -1,10 +1,19 @@
 .header {
   .logo {
-    height: 30px;
+    margin-top: 10px;
+    height: 100%;
     width: 350px;
   }
   .nav {
+    background-color: $primary;
     width: 100%;
+    margin-top: 10px;
+    transition: $transition;
+    transform: scale(1, 0);
+    transform-origin: top;
+    &--active {
+      transform: scale(1);
+    }
     &__header {
       text-align: center;
       text-transform: uppercase;
@@ -12,16 +21,48 @@
       font-weight: 400;
     }
     &__list {
-      display: none;
+      transition: $transition 300ms;
+      transform: scale(1, 0);
+      opacity: 0;
+      transform-origin: top;
+      margin: 30px 50px 15px;
+      align-self: flex-start;
+      &--active {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+    &__link {
+      font-size: 20px;
+      margin-bottom: 10px;
+      display: inline-block;
+      color: white;
+      text-transform: uppercase;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
   .hamburger {
+    cursor: pointer;
     height: 10px;
     &__line {
+      transition: $transition;
       background-color: #fff;
       width: 22px;
       height: 1px;
       margin-bottom: 6px;
+    }
+    &--active {
+      .hamburger__line:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 5px);
+      }
+      .hamburger__line:nth-child(2) {
+        transform: scale(0);
+      }
+      .hamburger__line:nth-child(3) {
+        transform: rotate(45deg) translate(-4px, -5px);
+      }
     }
   }
 }
@@ -36,15 +77,16 @@
         display: none;
       }
       &__list {
+        margin: 0;
         display: block;
         width: 100%;
         margin-top: 10px;
         @include flex(row, space-evenly, center);
       }
       &__link {
-        display: inline-block;
+        font-size: 16px;
+        margin-bottom: 7px;
         color: white;
-        text-transform: uppercase;
       }
     }
     .hamburger {
@@ -53,18 +95,29 @@
   }
 }
 .landing-page {
-  .icon {
+  &__img {
+    display: none;
+    width: 100%;
+    object-fit: cover;
+    &--active {
+      display: block;
+    }
+  }
+  &__icon {
+    cursor: pointer;
     @include flex(row, space-between, center);
     padding: 0 40px;
     position: relative;
-    top: 45%;
+    bottom: 150px;
     color: $secondary;
   }
   .caerousel-container {
+    z-index: 2;
+    cursor: pointer;
     @include flex(row, center, center);
     position: relative;
-    top: 80%;
-    color: white;
+    bottom: 50px;
+    color: #fff;
 
     font-size: 10px;
     .far {
@@ -118,11 +171,6 @@
       @include flex(column, center, center);
       margin-top: 0;
     }
-
-    &__input {
-    }
-    &__select {
-    }
     &__parg {
       width: 100%;
     }
@@ -134,22 +182,23 @@
 .gallery {
   &__header {
     text-align: left;
-    margin: 15px 20px;
+    margin: 15px 40px;
     text-transform: uppercase;
     font-size: 22px;
   }
   &__parg {
-    margin: 50px 20px 10px 20px;
+    margin: 50px 40px 10px;
     text-align: left;
     text-transform: capitalize;
     font-size: 14px;
   }
   &__slider {
-    margin: 15px 20px 0;
+    margin: 15px 40px 0;
     text-align: left;
     color: white;
     font-size: 20px;
     .fas {
+      cursor: pointer;
       margin: 0 5px;
     }
   }
@@ -158,7 +207,7 @@
     top: -130px;
     @include flex(row, center, center);
     max-width: 100%;
-    height: 100px;
+    height: 150px;
     * {
       width: 50%;
       height: 100%;
@@ -167,7 +216,7 @@
   }
   &__link {
     position: relative;
-    top: 80px;
+    top: 150px;
   }
 }
 @media (min-width: 750px) {

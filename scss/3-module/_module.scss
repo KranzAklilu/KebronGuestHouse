@@ -1,8 +1,8 @@
 .header {
   .logo {
-    margin-top: 10px;
+    margin-top: 15px;
     height: 100%;
-    width: 350px;
+    width: 275px;
   }
   .nav {
     background-color: $primary;
@@ -13,12 +13,6 @@
     transform-origin: top;
     &--active {
       transform: scale(1);
-    }
-    &__header {
-      text-align: center;
-      text-transform: uppercase;
-      font-size: 14px;
-      font-weight: 400;
     }
     &__list {
       transition: $transition 300ms;
@@ -46,6 +40,9 @@
   .hamburger {
     cursor: pointer;
     height: 10px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
     &__line {
       transition: $transition;
       background-color: #fff;
@@ -71,8 +68,10 @@
     .logo {
       height: 45px;
       width: auto;
+      margin: auto;
     }
     .nav {
+      margin: 0;
       transform: none;
       &__header {
         display: none;
@@ -159,7 +158,7 @@
 
   &__parg {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 600;
     text-align: left;
   }
@@ -241,11 +240,15 @@
     &__section1 {
       min-width: 45%;
       max-height: 100%;
-      padding: 20px;
+      padding: 40px 20px;
     }
     &__section2 {
       background-color: black;
       min-height: 100%;
+    }
+    &__parg {
+      font-size: 16px;
+      margin-bottom: 30px;
     }
     &__img {
       position: unset;
@@ -255,10 +258,14 @@
         width: 60%;
       }
     }
+
     &__link {
+      display: inline-block;
       position: relative;
-      padding: 10px 30px;
+      margin-top: -20px;
+      padding: 15px 30px;
       top: -15px;
+      right: 40px;
     }
   }
 }
@@ -282,7 +289,8 @@
   &__card {
     display: none;
     text-align: center;
-    margin: 0 30px;
+    margin: 0 30px 100px;
+    padding-bottom: 40px;
     background-color: $primary;
     color: #fff;
     &--active {
@@ -302,12 +310,13 @@
   }
   &__parg {
     text-align: left;
-    margin: 30px 35px;
+    margin: 50px 35px;
     line-height: 1.6;
     font-size: 12px;
     text-transform: capitalize;
   }
   &__btn {
+    padding: 13px;
     margin: 0 auto 30px;
   }
   &__img {
@@ -332,40 +341,43 @@
     }
     &__card {
       height: 300px;
-      margin-top: 30px;
+      margin: 30px auto 0;
       max-width: 100%;
       text-align: right;
       display: none;
       &--active {
-        max-width: 100%;
+        width: 100%;
         @include flex(column, flex-start, center);
         flex-wrap: wrap;
       }
     }
     &__text-container {
-      padding-top: 100px;
+      padding: 120px 30px 0;
       height: 100%;
-      width: 40%;
+      width: 44%;
     }
     &__header {
       position: relative;
-      right: 37%;
-      top: 0;
+      right: 41%;
       order: 2;
-      max-width: 275px;
+      max-width: 300px;
       text-align: left;
       color: #fff;
       background-color: unset;
     }
-
+    &__parg {
+      font-size: 14px;
+      margin: 10px 20px 7px 0;
+    }
     &__img {
-      height: 100%;
-      width: 60%;
+      height: 116%;
+      width: 56%;
       justify-self: flex-start;
     }
     &__btn {
-      padding: 10px 25px;
-      margin: 0 35px;
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 0px 20px;
     }
   }
 }
@@ -411,6 +423,12 @@
     &__card {
       margin: 0;
       width: 100%;
+    }
+    &__speaker {
+      font-size: 22px;
+    }
+    &__parg {
+      font-size: 14px;
     }
   }
 }

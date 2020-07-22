@@ -42,6 +42,13 @@ view.landingPageIcon.addEventListener("click", (e) => {
 view.descLink.forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
+    const allLinks = [...view.descLink];
+    const activeLink = allLinks.find((item) =>
+      item.classList.contains("description__link--active")
+    );
+    activeLink.classList.remove("description__link--active");
+    e.target.classList.add("description__link--active");
+
     const id = e.target.dataset.id;
     const card = [...view.card];
     const activeCard = card.find((item) => item.dataset.id === id);

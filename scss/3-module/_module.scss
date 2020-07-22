@@ -100,13 +100,22 @@
   }
 }
 .landing-page {
+  &__img-container {
+    position: relative;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right, #fff, $primary);
+    max-height: 70vh;
+  }
   &__img {
     display: none;
-    width: 100%;
-    object-fit: cover;
-    height: 225px;
+
     &--active {
       display: block;
+      width: 100%;
+      object-fit: cover;
+      height: 225px;
+      z-index: -1;
+      opacity: 0.5;
     }
   }
   &__icon {
@@ -118,7 +127,20 @@
     color: $secondary;
   }
 }
-
+@media (min-width: 750px) {
+  .landing-page {
+    &__img {
+      position: relative;
+      top: 0;
+      width: 100%;
+      object-fit: cover;
+      height: 70vh;
+    }
+    &__icon {
+      bottom: 250px;
+    }
+  }
+}
 .booking {
   &__header {
     color: $primary;
@@ -297,11 +319,22 @@
     &__menu {
       background-color: #fff;
     }
+    &__link {
+      text-align: center;
+      font-size: 20px;
+      color: #000;
+      text-transform: capitalize;
+      &--active {
+        font-weight: 700;
+        color: $primary;
+        font-size: 24px;
+      }
+    }
     &__card {
       height: 300px;
       margin-top: 30px;
       max-width: 100%;
-      text-align: left;
+      text-align: right;
       display: none;
       &--active {
         max-width: 100%;
@@ -310,25 +343,19 @@
       }
     }
     &__text-container {
-      padding-top: 75px;
+      padding-top: 100px;
       height: 100%;
       width: 40%;
     }
     &__header {
       position: relative;
-      right: 36%;
-      bottom: 20px;
+      right: 37%;
+      top: 0;
       order: 2;
       max-width: 275px;
       text-align: left;
       color: #fff;
       background-color: unset;
-    }
-    &__link {
-      text-align: center;
-      font-size: 20px;
-      color: #000;
-      text-transform: capitalize;
     }
 
     &__img {
@@ -337,6 +364,7 @@
       justify-self: flex-start;
     }
     &__btn {
+      padding: 10px 25px;
       margin: 0 35px;
     }
   }

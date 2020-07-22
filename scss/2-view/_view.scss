@@ -35,15 +35,13 @@
   @include flex(column, flex-start, center);
 }
 #landing-page {
-  margin: 0 0 125px;
   margin-top: 95px;
   max-width: 100%;
   max-height: 325px;
 }
 @media (min-width: 750px) {
   #landing-page {
-    height: 70vh;
-    margin-bottom: 0;
+    min-height: 70vh;
   }
 }
 #booking {
@@ -55,10 +53,9 @@
 }
 @media (min-width: 750px) {
   #booking {
-    position: relative;
-    top: -180px;
     z-index: 1;
-    margin: 0 30px;
+    width: 90%;
+    margin: -150px auto 100px;
     padding: 15px 0;
   }
 }
@@ -73,9 +70,7 @@
 @media (min-width: 750px) {
   #gallery {
     height: 300px;
-    position: relative;
-    top: -80px;
-    margin: 0 50px;
+    margin: 75px 50px;
     padding: 0;
     text-align: right;
   }

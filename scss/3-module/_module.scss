@@ -5,17 +5,18 @@
   }
   .phone1,
   .phone2 {
-    padding: 0px 15px;
+    padding: 0px 10px;
     @include flex(row, center, center);
     i {
       color: $primary;
     }
   }
   &__parg {
-    font-size: 14px;
+    font-size: 12px;
   }
+
   &__list {
-    padding: 0 20px;
+    padding: 0 10px;
     @include flex(row, center, center);
   }
   &__link {
@@ -84,7 +85,7 @@
         transform: scale(0);
       }
       .hamburger__line:nth-child(3) {
-        transform: rotate(45deg) translate(-4px, -9px);
+        transform: rotate(45deg) translate(-5px, -10px);
       }
     }
   }
@@ -196,28 +197,32 @@
   }
   &__check {
     @include flex(row, space-between, center);
-    margin: 20px 0;
+    margin: 50px 0;
   }
   &__select {
     @include flex(row, flex-start, center);
   }
 
   &__parg {
-    width: 50%;
+    width: 60%;
     text-align: left;
     text-transform: uppercase;
-    font-size: 16px;
-    font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
   }
   &__input {
-    margin-left: 20px;
-    width: 50%;
+    margin: 0 20px;
+    width: 60%;
     border: none;
     border-bottom: 1px solid rgb(163, 163, 163);
   }
   .select {
     border: none;
+    border-bottom: 1px solid rgb(163, 163, 163);
     margin-left: 20px;
+  }
+  &__link {
+    margin-top: 70px;
   }
 }
 @media (min-width: 750px) {
@@ -230,11 +235,17 @@
     }
     &__check,
     &__select {
-      @include flex(column, center, center);
+      @include flex(column, center, flex-start);
       margin-top: 0;
     }
     &__parg {
       width: 100%;
+    }
+    &__input,
+    .select {
+      width: 90%;
+      margin: auto;
+      margin-top: 20px;
     }
     &__link {
       margin: 0;
@@ -266,7 +277,7 @@
   }
   &__img {
     position: relative;
-    top: -130px;
+    margin-top: -20px;
     @include flex(row, center, center);
     max-width: 100%;
     height: 150px;
@@ -278,7 +289,7 @@
   }
   &__link {
     position: relative;
-    top: 150px;
+    top: 200px;
   }
 }
 @media (min-width: 750px) {
@@ -288,20 +299,19 @@
     &__section1 {
       min-width: 45%;
       max-height: 100%;
-      padding: 40px 20px;
+      padding: 10px;
     }
     &__section2 {
-      background-color: black;
-      min-height: 100%;
+      height: 100%;
     }
     &__parg {
       font-size: 16px;
       margin-bottom: 30px;
     }
     &__img {
-      position: unset;
-      object-fit: contain;
-      height: 300px;
+      object-fit: cover;
+      height: 100%;
+      margin: 0;
       :first-child {
         width: 60%;
       }
@@ -400,13 +410,15 @@
       }
     }
     &__text-container {
-      padding: 120px 30px 0;
-      height: 100%;
-      width: 44%;
+      padding: 70px 50px 0;
+      min-height: 300px;
+      width: 60%;
+      border: 1px solid black;
     }
     &__header {
       position: relative;
-      right: 41%;
+      right: 55%;
+      bottom: 20px;
       order: 2;
       max-width: 300px;
       text-align: left;
@@ -415,17 +427,18 @@
     }
     &__parg {
       font-size: 14px;
-      margin: 10px 20px 7px 0;
+      margin: 30px 20px 7px 0;
     }
     &__img {
       height: 116%;
-      width: 56%;
+      width: 40%;
+      object-fit: cover;
       justify-self: flex-start;
     }
     &__btn {
       display: inline-block;
       padding: 15px 30px;
-      margin: 0px 20px;
+      margin: 10px 30px;
     }
   }
 }

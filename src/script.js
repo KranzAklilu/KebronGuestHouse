@@ -1,4 +1,5 @@
 const view = {
+  header: document.querySelector("#header"),
   hamburger: document.querySelector(".hamburger"),
   nav: document.querySelector(".nav"),
   navList: document.querySelector(".nav__list"),
@@ -12,6 +13,15 @@ const view = {
   descLink: document.querySelectorAll(".description__link"),
   card: document.querySelectorAll(".description__card"),
 };
+
+window.onscroll = () => {
+  if (window.scrollY >= 30) {
+    view.header.classList.add("fixed");
+  } else {
+    view.header.classList.remove("fixed");
+  }
+};
+
 view.hamburger.addEventListener("click", () => {
   view.hamburger.classList.toggle("hamburger--active");
   view.navList.classList.toggle("nav__list--active");

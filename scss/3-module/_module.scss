@@ -1,3 +1,28 @@
+.top {
+  &__phone {
+    @include flex(row, center, center);
+    margin-left: 15px;
+  }
+  .phone1,
+  .phone2 {
+    padding: 0px 15px;
+    @include flex(row, center, center);
+    i {
+      color: $primary;
+    }
+  }
+  &__parg {
+    font-size: 14px;
+  }
+  &__list {
+    padding: 0 20px;
+    @include flex(row, center, center);
+  }
+  &__link {
+    color: $primary;
+    margin: 0 10px;
+  }
+}
 .header {
   .logo {
     margin-top: 15px;
@@ -5,9 +30,10 @@
     width: 275px;
   }
   .nav {
+    z-index: 10;
     background-color: $primary;
     width: 100%;
-    margin-top: 10px;
+    margin-top: -10px;
     transition: $transition;
     transform: scale(1, 0);
     transform-origin: top;
@@ -39,29 +65,33 @@
   }
   .hamburger {
     cursor: pointer;
-    height: 10px;
-    position: absolute;
-    right: 20px;
-    top: 20px;
+    height: 25px;
+    position: relative;
+    bottom: 25px;
+    left: 90%;
     &__line {
       transition: $transition;
       background-color: #fff;
-      width: 22px;
-      height: 1px;
-      margin-bottom: 6px;
+      width: 25px;
+      height: 2px;
+      margin-bottom: 8px;
     }
     &--active {
       .hamburger__line:nth-child(1) {
-        transform: rotate(-45deg) translate(-5px, 5px);
+        transform: rotate(-45deg) translate(-5px, 8px);
       }
       .hamburger__line:nth-child(2) {
         transform: scale(0);
       }
       .hamburger__line:nth-child(3) {
-        transform: rotate(45deg) translate(-4px, -5px);
+        transform: rotate(45deg) translate(-4px, -9px);
       }
     }
   }
+}
+.fixed {
+  position: fixed;
+  top: 0;
 }
 @media (min-width: 750px) {
   .header {
@@ -115,10 +145,19 @@
       object-fit: cover;
       height: 225px;
       z-index: -1;
-      opacity: 0.5;
+      opacity: 0.7;
+      animation-name: fade;
+      animation-duration: 1s;
     }
   }
-
+  @keyframes fade {
+    from {
+      opacity: 0.2;
+    }
+    to {
+      opacity: 0.7;
+    }
+  }
   &__icon {
     @include flex(row, space-between, center);
     padding: 0 40px;
@@ -164,13 +203,15 @@
   }
 
   &__parg {
+    width: 50%;
+    text-align: left;
     text-transform: uppercase;
     font-size: 16px;
     font-weight: 600;
-    text-align: left;
   }
   &__input {
-    min-width: 140px;
+    margin-left: 20px;
+    width: 50%;
     border: none;
     border-bottom: 1px solid rgb(163, 163, 163);
   }

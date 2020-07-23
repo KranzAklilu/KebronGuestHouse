@@ -1,0 +1,6 @@
+#top {
+    background-color: #fff;
+    width: 100%;
+    @include flex(row, space-between, center);
+    height: 30px;
+}

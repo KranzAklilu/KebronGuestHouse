@@ -1,0 +1,105 @@
+.header {
+    .logo {
+        margin-top: 15px;
+        height: 100%;
+        width: 275px;
+    }
+    .nav {
+        z-index: 10;
+        background-color: $primary;
+        width: 100%;
+        margin-top: -10px;
+        transition: $transition;
+        transform: scale(1, 0);
+        transform-origin: top;
+        &--active {
+            transform: scale(1);
+        }
+        &__list {
+            transition: $transition 300ms;
+            transform: scale(1, 0);
+            opacity: 0;
+            transform-origin: top;
+            margin: 30px 50px 15px;
+            align-self: flex-start;
+            &--active {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        &__link {
+            font-size: 20px;
+            margin-bottom: 10px;
+            display: inline-block;
+            color: white;
+            text-transform: uppercase;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .hamburger {
+        cursor: pointer;
+        height: 25px;
+        position: relative;
+        bottom: 25px;
+        left: 90%;
+        &__line {
+            transition: $transition;
+            background-color: #fff;
+            width: 25px;
+            height: 2px;
+            margin-bottom: 8px;
+        }
+        &--active {
+            .hamburger__line:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 8px);
+            }
+            .hamburger__line:nth-child(2) {
+                transform: scale(0);
+            }
+            .hamburger__line:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -10px);
+            }
+        }
+    }
+}
+.fixed {
+    position: fixed;
+    top: 0;
+}
+@media (min-width: 750px) {
+    .header {
+        .logo {
+            height: 45px;
+            width: auto;
+            margin: auto;
+        }
+        .nav {
+            margin: 0;
+            transform: none;
+            &__header {
+                display: none;
+            }
+            &__list {
+                transform: none;
+                transition: none;
+                opacity: 1;
+                margin: 0;
+                display: block;
+                width: 100%;
+                margin-top: 10px;
+                @include flex(row, space-evenly, center);
+            }
+            &__link {
+                display: inline-block;
+                font-size: 16px;
+                margin-bottom: 20px;
+                color: white;
+            }
+        }
+        .hamburger {
+            display: none;
+        }
+    }
+}

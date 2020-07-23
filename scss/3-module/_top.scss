@@ -1,0 +1,26 @@
+.top {
+    &__phone {
+        @include flex(row, center, center);
+        margin-left: 15px;
+    }
+    .phone1,
+    .phone2 {
+        padding: 0px 10px;
+        @include flex(row, center, center);
+        i {
+            color: $primary;
+        }
+    }
+    &__parg {
+        font-size: 12px;
+    }
+
+    &__list {
+        padding: 0 10px;
+        @include flex(row, center, center);
+    }
+    &__link {
+        color: $primary;
+        margin: 0 10px;
+    }
+}

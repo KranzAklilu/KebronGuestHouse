@@ -1,0 +1,22 @@
+.footer {
+    &__link {
+        display: inline-block;
+        color: #fff;
+        margin: 15px 0;
+        font-size: 25px;
+    }
+    &__copyright {
+        margin: 20px 0;
+    }
+}
+@media (min-width: 750px) {
+    .footer {
+        .social {
+            width: 50%;
+            margin: 20px auto 60px;
+        }
+        &__list {
+            @include flex(row, space-around, center);
+        }
+    }
+}

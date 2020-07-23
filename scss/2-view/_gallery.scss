@@ -1,0 +1,17 @@
+#gallery {
+    height: 500px;
+    max-width: 100%;
+    background-color: $primary;
+    color: white;
+    padding: 50px 10px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    #gallery {
+        height: 300px;
+        width: 90%;
+        margin: 100px auto;
+        padding: 0;
+        text-align: right;
+    }
+}

@@ -1,9 +1,11 @@
 #description {
-    max-width: 100%;
+  max-width: 100%;
+  margin: 50px 0;
 }
 @media (min-width: 750px) {
-    #description {
-        margin: 0 auto;
-        width: 90%;
-    }
+  #description {
+    border: 1px solid black;
+    margin: 60px auto;
+    width: 90%;
+  }
 }

@@ -1,5 +1,5 @@
 const view = {
-  header: document.querySelector("#header"),
+  header: document.querySelector(".header"),
   hamburger: document.querySelector(".hamburger"),
   nav: document.querySelector(".nav"),
   navList: document.querySelector(".nav__list"),

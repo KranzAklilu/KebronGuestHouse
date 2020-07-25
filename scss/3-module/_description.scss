@@ -1,114 +1,119 @@
 .description {
-    &__menu {
-        width: 100%;
-        height: 55px;
-        background-color: $primary;
+  &__menu {
+    width: 100%;
+    height: 55px;
+    background-color: $primary;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+  }
+  &__list {
+    @include flex(row, space-evenly, center);
+    height: 100%;
+  }
+  &__link {
+    text-align: center;
+    font-size: 12px;
+    color: #fff;
+    text-transform: capitalize;
+    &--active {
+      font-weight: 600;
     }
-    &__list {
-        @include flex(row, space-evenly, center);
-        height: 100%;
-    }
-    &__link {
-        text-align: center;
-        font-size: 12px;
-        color: #fff;
-        text-transform: capitalize;
-    }
+  }
 
-    &__card {
-        display: none;
-        text-align: center;
-        margin: 0 30px 100px;
-        padding-bottom: 40px;
-        background-color: $primary;
-        color: #fff;
-        &--active {
-            display: block;
-        }
+  &__card {
+    display: none;
+    text-align: center;
+    margin: 0 30px 100px;
+    background-color: $primary;
+    color: #fff;
+    &--active {
+      display: block;
     }
-    &__header {
-        width: 100%;
-        font-size: 24px;
-        font-weight: 400;
-        text-align: left;
-        text-transform: uppercase;
-        margin: 50px 0 0;
-        background-color: #fff;
-        color: #000000;
-        padding-bottom: 30px;
-    }
-    &__parg {
-        text-align: left;
-        margin: 50px 35px;
-        line-height: 1.6;
-        font-size: 12px;
-        text-transform: capitalize;
-    }
-    &__btn {
-        padding: 13px;
-        margin: 0 auto 30px;
-    }
-    &__img {
-        width: 100%;
-    }
+  }
+  &__header {
+    width: 100%;
+    font-size: 24px;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    margin: 50px 0 0;
+    background-color: #fff;
+    color: #000000;
+    padding-bottom: 30px;
+  }
+  &__parg {
+    text-align: left;
+    margin: 20px 25px 30px;
+    line-height: 1.6;
+    font-size: 12px;
+    text-transform: capitalize;
+  }
+  &__btn {
+    padding: 13px;
+    margin: 0 auto 30px;
+  }
+  &__img {
+    width: 100%;
+  }
 }
 @media (min-width: 750px) {
-    .description {
-        &__menu {
-            background-color: #fff;
-        }
-        &__link {
-            text-align: center;
-            font-size: 20px;
-            color: #000;
-            text-transform: capitalize;
-            &--active {
-                font-weight: 700;
-                color: $primary;
-                font-size: 24px;
-            }
-        }
-        &__card {
-            height: 300px;
-            margin: 30px auto 0;
-            max-width: 100%;
-            text-align: right;
-            display: none;
-            &--active {
-                width: 100%;
-                @include flex(column, flex-start, center);
-                flex-wrap: wrap;
-            }
-        }
-        &__text-container {
-            padding: 70px 50px 0;
-            min-height: 300px;
-            width: 60%;
-        }
-        &__header {
-            position: relative;
-            right: 55%;
-            bottom: 20px;
-            order: 2;
-            max-width: 300px;
-            text-align: left;
-            color: #fff;
-            background-color: unset;
-        }
-        &__parg {
-            font-size: 16px;
-            margin: 30px 20px 7px 0;
-        }
-        &__img {
-            height: 116%;
-            width: 40%;
-            object-fit: cover;
-            justify-self: flex-start;
-        }
-        &__btn {
-            display: inline-block;
-            padding: 15px 30px;
-            margin: 10px 30px;
-        }
+  .description {
+    &__menu {
+      margin-bottom: 50px;
+      background-color: #fff;
     }
+    &__link {
+      text-align: center;
+      font-size: 24px;
+      color: #000;
+      text-transform: capitalize;
+      &--active {
+        font-weight: 700;
+        color: $primary;
+        font-size: 24px;
+      }
+    }
+    &__card {
+      height: 300px;
+      margin: 30px auto 0;
+      max-width: 1200px;
+      text-align: right;
+      display: none;
+      &--active {
+        width: 100%;
+        @include flex(column, flex-start, center);
+        flex-wrap: wrap;
+      }
+    }
+    &__text-container {
+      padding: 70px 50px 0;
+      min-height: 300px;
+      width: 60%;
+    }
+    &__header {
+      position: relative;
+      right: 55%;
+      bottom: 20px;
+      order: 2;
+      max-width: 300px;
+      text-align: left;
+      color: #fff;
+      background-color: unset;
+    }
+    &__parg {
+      font-size: 16px;
+      margin: 30px 20px 7px 0;
+    }
+    &__img {
+      height: 116%;
+      width: 40%;
+      object-fit: cover;
+      justify-self: flex-start;
+    }
+    &__btn {
+      display: inline-block;
+      padding: 15px 30px;
+      margin: 10px 30px;
+    }
+  }
 }

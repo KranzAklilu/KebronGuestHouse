@@ -1,9 +1,9 @@
-#landing-page {
+.landing-page {
     max-width: 100%;
     max-height: 325px;
 }
 @media (min-width: 750px) {
-    #landing-page {
+    .landing-page {
         margin-top: 30px;
         min-height: 70vh;
     }

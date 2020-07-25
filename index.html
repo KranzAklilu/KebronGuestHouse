@@ -8,15 +8,15 @@
   </head>
   <body>
     <div id="App">
-      <section id="top" class="top">
+      <section class="top">
         <div class="top__phone">
           <div class="phone1">
             <i class="fa fa-phone"></i>
-            <p class="top__parg">+251 911 213134</p>
+            <a class="top__call">+251 911 213134</a>
           </div>
           <div class="phone2">
             <i class="fas fa-phone"></i>
-            <p class="top__parg">+251 911 213118</p>
+            <a class="top__call">+251 911 213118</a>
           </div>
         </div>
         <div class="top__social">
@@ -40,7 +40,7 @@
           </ul>
         </div>
       </section>
-      <header id="header" class="header">
+      <header class="header">
         <img class="logo" src="./assets/logo.png" alt="" />
         <div class="hamburger">
           <div class="hamburger__line"></div>
@@ -49,16 +49,16 @@
         </div>
         <nav class="nav">
           <ul class="nav__list">
-            <li><a href="" class="nav__link">accomodations</a></li>
-            <li><a href="" class="nav__link">gallery</a></li>
             <li><a href="" class="nav__link">home</a></li>
+            <li><a href="" class="nav__link">gallery</a></li>
+            <li><a href="" class="nav__link">accomodations</a></li>
             <li><a href="" class="nav__link">amenities</a></li>
             <li><a href="" class="nav__link">contact</a></li>
           </ul>
         </nav>
       </header>
       <main>
-        <section id="landing-page" class="landing-page">
+        <section class="landing-page">
           <div class="landing-page__img-container">
             <img
               class="landing-page__img landing-page__img--active"
@@ -81,7 +81,7 @@
             <i class="fas fa-chevron-right right"></i>
           </div>
         </section>
-        <section id="booking" class="booking">
+        <section class="booking">
           <h1 class="booking__header">book online now</h1>
           <div class="booking__input-container">
             <div class="booking__check">
@@ -113,26 +113,7 @@
             <a href="#" class="primary-btn booking__link">Search</a>
           </div>
         </section>
-        <section id="gallery" class="gallery">
-          <div class="gallery__section1">
-            <h1 class="gallery__header">a glance from the rich gallery</h1>
-            <p class="gallery__parg">
-              browse our photo gallery to experience the elegance and greatness
-              of out guest house
-            </p>
-            <div class="gallery__slider">
-              <i class="fas fa-caret-left"></i>
-              <i class="fas fa-caret-right"></i>
-            </div>
-            <a href="#" class="primary-btn gallery__link">Explore</a>
-          </div>
-          <div class="gallery__section2">
-            <div class="gallery__img">
-              <img src="./assets/kebron-guest-house.jpg" alt="Room View" />
-              <img src="./assets/kghcommonarea.jpg" alt="Common Area" />
-            </div>
-          </div>
-        </section>
+
         <section id="description" class="description">
           <div class="description__menu">
             <ul class="description__list">
@@ -250,6 +231,26 @@
             </div>
           </div>
         </section>
+        <section id="gallery" class="gallery">
+          <div class="gallery__section1">
+            <h1 class="gallery__header">a glance from the rich gallery</h1>
+            <p class="gallery__parg">
+              browse our photo gallery to experience the elegance and greatness
+              of out guest house
+            </p>
+            <div class="gallery__slider">
+              <i class="fas fa-caret-left"></i>
+              <i class="fas fa-caret-right"></i>
+            </div>
+            <a href="#" class="primary-btn gallery__link">Explore</a>
+          </div>
+          <div class="gallery__section2">
+            <div class="gallery__img">
+              <img src="./assets/kebron-guest-house.jpg" alt="Room View" />
+              <img src="./assets/kghcommonarea.jpg" alt="Common Area" />
+            </div>
+          </div>
+        </section>
       </main>
       <footer id="footer" class="footer">
         <div class="social">
@@ -288,6 +289,6 @@
         <p class="footer__parg">Powered By endubis, Hosted By endubis HOST</p>
       </footer>
     </div>
-    <script src="./src/script.js"></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>

@@ -1,59 +1,59 @@
 .landing-page {
-    &__img-container {
-        position: relative;
-        z-index: -1;
-        background-image: linear-gradient(to bottom right, #fff, $primary);
-        max-height: 70vh;
-    }
+  &__img-container {
+    position: relative;
+    z-index: -1;
+    background-image: linear-gradient(to bottom right, #fff, $primary);
+    max-height: 70vh;
+  }
 
-    &__img {
-        display: none;
+  &__img {
+    display: none;
 
-        &--active {
-            display: block;
-            width: 100%;
-            object-fit: cover;
-            height: 225px;
-            z-index: -1;
-            opacity: 0.7;
-            animation-name: fade;
-            animation-duration: 1s;
-        }
+    &--active {
+      display: block;
+      width: 100%;
+      object-fit: cover;
+      height: 225px;
+      z-index: -1;
+      opacity: 0.7;
+      animation-name: fade;
+      animation-duration: 1s;
     }
-    @keyframes fade {
-        from {
-            opacity: 0.2;
-        }
-        to {
-            opacity: 0.7;
-        }
+  }
+  @keyframes fade {
+    from {
+      opacity: 0.2;
     }
-    &__icon {
-        @include flex(row, space-between, center);
-        width: 80%;
-        margin: auto;
-        position: relative;
-        bottom: 150px;
-        color: $secondary;
-        .left,
-        .right {
-            cursor: pointer;
-            width: 20px;
-            padding: 10px;
-        }
+    to {
+      opacity: 0.7;
     }
+  }
+  &__icon {
+    @include flex(row, space-between, center);
+    width: 80%;
+    margin: auto;
+    position: relative;
+    top: -150px;
+    color: $secondary;
+    .left,
+    .right {
+      cursor: pointer;
+      padding: 10px;
+      background-color: rgb(2, 66, 61, 0.1);
+    }
+  }
 }
 @media (min-width: 750px) {
-    .landing-page {
-        &__img {
-            position: relative;
-            top: 0;
-            width: 100%;
-            object-fit: cover;
-            height: 70vh;
-        }
-        &__icon {
-            bottom: 250px;
-        }
+  .landing-page {
+    &__img {
+      position: relative;
+      top: 0;
+      width: 100%;
+      object-fit: cover;
+      height: 70vh;
     }
+    &__icon {
+      top: -300px;
+    }
+  }
 }

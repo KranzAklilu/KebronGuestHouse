@@ -1,17 +1,17 @@
 .booking {
-    background-color: #fff;
-    width: 85%;
-    max-width: 100%;
-    margin: 0 auto 20px;
-    padding: 0 10px;
-    text-align: center;
+  background-color: #fff;
+  width: 85%;
+  max-width: 100%;
+  margin: 0 auto 20px;
+  padding: 0 10px;
+  text-align: center;
 }
 @media (min-width: 750px) {
-    .booking {
-        z-index: 1;
-        max-width: 1200px;
-        min-width: 750px;
-        margin: -200px auto 0;
-        padding: 15px 0;
-    }
+  .booking {
+    z-index: 1;
+    max-width: 1200px;
+    min-width: 750px;
+    margin: -228px auto 0;
+    padding: 15px 0;
+  }
 }

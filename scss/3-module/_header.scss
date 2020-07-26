@@ -45,7 +45,7 @@
     height: 25px;
     position: relative;
     bottom: 20px;
-    left: 86%;
+    left: 90%;
     &__line {
       transition: $transition;
       background-color: #fff;
@@ -74,12 +74,12 @@
   .header {
     .logo {
       height: 45px;
-      width: 400px;
-      margin: auto;
+      min-width: 350px;
+      margin: 20px auto;
     }
     .nav {
       border: none;
-      margin: 5px 0;
+      margin-top: -15px;
       transform: none;
       &__list {
         display: block;
@@ -94,7 +94,7 @@
       &__link {
         display: inline-block;
         font-size: 16px;
-        margin: 10px 0 18px;
+        margin-bottom: 15px;
         color: white;
       }
     }

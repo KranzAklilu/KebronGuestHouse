@@ -3,13 +3,13 @@
     text-align: left;
     margin: 10px 20px;
     text-transform: uppercase;
-    font-size: 22px;
+    font-size: 1.4rem;
   }
   &__parg {
-    margin: 30px 20px 10px;
+    margin: 40px 20px 30px;
     text-align: left;
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
   &__slider {
     margin: 10px 20px 0;
@@ -35,25 +35,25 @@
   }
   &__link {
     position: relative;
-    top: 200px;
+    top: 210px;
   }
 }
 @media (min-width: 750px) {
   .gallery {
     @include flex(row-reverse, center, center);
 
-    &__section1 {
+    &__top-section {
       max-width: 45%;
       max-height: 100%;
       margin-left: 20px;
     }
-    &__section2 {
+    &__bottom-section {
       max-width: 55%;
       height: 100%;
     }
     &__parg {
-      font-size: 16px;
-      margin-bottom: 30px;
+      font-size: 1rem;
+      margin: 50px 20px;
     }
     &__img {
       position: relative;
@@ -62,10 +62,9 @@
     }
 
     &__link {
-      display: inline-block;
       position: relative;
       margin-top: -20px;
-      padding: 15px 30px;
+      padding: 10px 30px;
       top: -15px;
       right: 40px;
     }

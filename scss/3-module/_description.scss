@@ -1,10 +1,12 @@
 .description {
+  &__hr {
+    color: $primary;
+    width: 25%;
+    margin: -10px auto 30px;
+  }
   &__menu {
     width: 100%;
     height: 55px;
-    background-color: $primary;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
   }
   &__list {
     @include flex(row, space-evenly, center);
@@ -12,10 +14,11 @@
   }
   &__link {
     text-align: center;
-    font-size: 12px;
-    color: #fff;
+    font-size: 0.8rem;
+    color: #000;
     text-transform: capitalize;
     &--active {
+      color: $primary;
       font-weight: 600;
     }
   }
@@ -23,7 +26,8 @@
   &__card {
     display: none;
     text-align: center;
-    margin: 0 30px 100px;
+    width: 85%;
+    margin: 0 auto 100px;
     background-color: $primary;
     color: #fff;
     &--active {
@@ -32,7 +36,7 @@
   }
   &__header {
     width: 100%;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 400;
     text-align: left;
     text-transform: uppercase;
@@ -45,7 +49,7 @@
     text-align: left;
     margin: 20px 25px 30px;
     line-height: 1.6;
-    font-size: 12px;
+    font-size: 0.8rem;
     text-transform: capitalize;
   }
   &__btn {
@@ -58,19 +62,21 @@
 }
 @media (min-width: 750px) {
   .description {
+    &__hr {
+      display: none;
+    }
     &__menu {
-      margin-bottom: 60px;
+      margin-bottom: 80px;
       background-color: #fff;
     }
     &__link {
       text-align: center;
-      font-size: 24px;
+      font-size: 1.5rem;
       color: #000;
       text-transform: capitalize;
       &--active {
         font-weight: 700;
         color: $primary;
-        font-size: 24px;
       }
     }
     &__card {
@@ -98,22 +104,21 @@
       max-width: 300px;
       text-align: left;
       color: #fff;
+      font-weight: 600;
       background-color: unset;
     }
     &__parg {
-      font-size: 16px;
-      margin: 30px 20px 7px 0;
+      font-size: 1rem;
+      margin: 30px 20px 30px 0;
     }
     &__img {
-      height: 116%;
+      height: 300px;
       width: 40%;
       object-fit: cover;
-      justify-self: flex-start;
     }
     &__btn {
-      display: inline-block;
-      padding: 15px 30px;
-      margin: 10px 30px;
+      padding: 10px 30px;
+      margin: 50px 30px 10px;
     }
   }
 }
